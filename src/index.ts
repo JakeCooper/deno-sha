@@ -9,5 +9,5 @@ console.log(`http://localhost:${port}/`);
 console.log(SHA)
 
 for await (const req of s) {
-  req.respond({ body: `Choo Choo! Welcome to your Deno app\nGit SHA is ${SHA}\URL is ${Deno.env.get("RAILWAY_STATIC_URL")}` });
+  req.respond({ body: `Choo Choo! Welcome to your Deno app\nGit SHA is ${SHA}\nURL is ${Deno.env.get("RAILWAY_STATIC_URL")}` });
 }
