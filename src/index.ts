@@ -6,5 +6,5 @@ const s = serve({ port });
 console.log(`http://localhost:${port}/`);
 
 for await (const req of s) {
-  req.respond({ body: `Choo Choo! Welcome to your Deno app\n. Git SHA is ${Deno.env.get("RAILWAY_GIT_COMMIT_SHA")}` });
+  req.respond({ body: `Choo Choo! Welcome to your Deno app\nGit SHA is ${Deno.env.get("RAILWAY_GIT_COMMIT_SHA")}\URL SHA is ${Deno.env.get("RAILWAY_STATIC_URL")}` });
 }
